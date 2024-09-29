@@ -1,5 +1,4 @@
 # Python-related files
-kingdomgiki/authentication/static/authentication/videos/*.mp4
 test/
 *.pyc
 __pycache__/
