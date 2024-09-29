@@ -41,7 +41,7 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.228.32']
+ALLOWED_HOSTS = ['*']
 AUTH_USER_MODEL = 'authentication.UserModel'
 
 # Case insensitivity backend
@@ -68,8 +68,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     #project app
-    'authentication'
+    'authentication', 
+    'crispy_forms',    # If using Django Crispy Forms
+    'cloudinary',    
 ]
+UNFOLD = {
+    "DASHBOARD_CALLBACK": "authentication.views.dashboard_callback",  # Change 'yourapp' to the actual app name
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -83,13 +88,19 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'kingdomgiki.urls'
 
+STATICFILES_DIRS = [
+    BASE_DIR / "static",  # Default static directory
+    BASE_DIR / "themes",   # Add your themes directory
+]
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR,'templates')],
+        'DIRS': [BASE_DIR / "templates", BASE_DIR / "themes"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
+                # Default context processors
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
@@ -149,9 +160,7 @@ USE_TZ = True
 
 
 STATIC_URL = 'static/'
-STATICFILES_DIRS = [
-    BASE_DIR / "static",
-]
+
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587

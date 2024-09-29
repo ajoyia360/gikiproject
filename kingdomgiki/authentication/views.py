@@ -8,6 +8,15 @@ from django.conf import settings
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from authentication.models import UserModel
+# authentication/views.py
+
+from django.shortcuts import render
+
+def dashboard_callback(request, context):
+    context.update({
+        "custom_variable": "value",  # Add any other variables you want to pass
+    })
+    return context
 
 
 def verify_email(request):

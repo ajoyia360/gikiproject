@@ -1,123 +1,26 @@
-/* friendsystem/static/friendsystem/css/custom_admin.css */
+/* authentication/static/authentication/css/custom_admin.css */
 
-/* Body background */
 body {
-  background: linear-gradient(135deg, #f6f8fc, #e6ebf5);
-  color: #333;
-  font-family: "Unfold", sans-serif; /* Assuming Unfold is your chosen font */
+  background-color: #f9fafb; /* Change background color */
+  font-family: "Arial", sans-serif; /* Change font style */
 }
 
-/* Panel Styling */
-.admin-panel {
-  background-color: #fff;
-  padding: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  margin-bottom: 20px;
-  transition: all 0.3s ease;
-}
-
-.admin-panel:hover {
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Form input styling */
-input,
-select,
-textarea {
+/* Example styling for admin tables */
+.table {
+  border-collapse: collapse;
   width: 100%;
-  padding: 12px;
-  margin: 10px 0 20px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-input:focus,
-select:focus,
-textarea:focus {
-  border-color: #007bff;
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-}
-
-/* Buttons */
-button {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #0056b3;
-}
-
-/* List view enhancements */
-table th,
-table td {
-  padding: 12px 15px;
-  border-bottom: 1px solid #e6ebf5;
-}
-
-table tr:hover {
-  background-color: #f9fafc;
-}
-
-table th {
-  background-color: #f1f3f7;
+.table th,
+.table td {
+  border: 1px solid #e5e7eb; /* Light gray border */
+  padding: 8px;
   text-align: left;
-  font-weight: bold;
 }
 
-/* Table header and body styling */
-thead {
-  background-color: #f1f3f7;
+/* Hover effect for rows */
+.table tr:hover {
+  background-color: #e5e7eb; /* Change row color on hover */
 }
 
-tbody tr:nth-child(even) {
-  background-color: #f9fafc;
-}
-
-tbody tr:hover {
-  background-color: #eef1f7;
-}
-
-/* Action buttons for admin */
-.admin-action-btn {
-  background-color: #28a745;
-  color: #fff;
-  padding: 8px 12px;
-  border-radius: 5px;
-  margin-right: 10px;
-  cursor: pointer;
-  text-align: center;
-  display: inline-block;
-  transition: background-color 0.3s ease;
-}
-
-.admin-action-btn:hover {
-  background-color: #218838;
-}
-
-/* Message notifications */
-.success-message {
-  background-color: #28a745;
-  color: white;
-  padding: 10px;
-  border-radius: 5px;
-  margin-bottom: 15px;
-}
-
-.error-message {
-  background-color: #dc3545;
-  color: white;
-  padding: 10px;
-  border-radius: 5px;
-  margin-bottom: 15px;
-}
-
-/* More specific styling as needed */
+/* Add more styles as needed */

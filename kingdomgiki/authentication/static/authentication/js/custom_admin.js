@@ -1,15 +1,7 @@
-// friendsystem/static/friendsystem/js/custom_admin.js
+// authentication/static/authentication/js/custom_admin.js
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Fade-in effect on page load
-  const adminPanels = document.querySelectorAll(".admin-panel");
-  adminPanels.forEach((panel) => {
-    panel.style.opacity = "0";
-    setTimeout(() => {
-      panel.style.transition = "opacity 0.5s ease-in-out";
-      panel.style.opacity = "1";
-    }, 100);
-  });
+  console.log("Custom Admin JS Loaded");
 
-  // Add additional JS as needed
+  // Add any custom JS functionalities here
 });
